@@ -1,0 +1,30 @@
+@page
+
+<h1>Bienvenidos</h1>
+
+@{
+var alumno = new Alumno();
+alumno.Nombre = "Kary Rguez";
+alumno.Edad = 32;
+alumno.Matricula = "ABCD1234";
+}
+
+<p>La hora del servidor es: @DateTime.Now</p>
+<p>@alumno.Nombre</p>
+<p>@alumno.Edad</p>
+<p>@alumno.Matricula</p>
+
+@functions {
+
+public class Persona{
+public string Nombre {get; set;}
+public int Edad {get; set;}
+}
+
+public class Alumno : Persona {
+
+public string Matricula {get; set;}
+
+   }
+
+}
